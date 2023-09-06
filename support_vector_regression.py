@@ -45,8 +45,7 @@ regressor.fit(X_train, y_train)
 """## Predicting the Test set results"""
 
 y_pred = sc_y.inverse_transform(regressor.predict(sc_X.transform(X_test)).reshape(-1,1))
-np.set_printoptions(precision=2)
-print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
+
 
 """## Evaluating the Model Performance"""
 
